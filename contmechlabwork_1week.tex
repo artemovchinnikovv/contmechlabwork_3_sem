@@ -1,0 +1,140 @@
+\documentclass[a4paper,12pt]{article} % тип документа
+
+% Поля страниц
+\usepackage[left=2.5cm,right=2.5cm,
+    top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+ 
+    
+%Отступ после заголовка    
+\usepackage{indentfirst}
+
+
+% Рисунки
+\usepackage{floatrow,graphicx,calc}
+\usepackage{wrapfig}
+
+% Создаёем новый разделитель
+\DeclareFloatSeparators{mysep}{\hspace{1cm}}
+
+% Ссылки?
+\usepackage[unicode, pdftex]{hyperref} % подключаем hyperref
+\usepackage{hyperref}
+\usepackage[rgb]{xcolor}
+\hypersetup{				% Гиперссылки
+    colorlinks=true,       	% false: ссылки в рамках
+	urlcolor=blue          % на URL
+}
+
+
+%  Русский язык
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+
+% Математика
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+
+
+% Что-то 
+\usepackage{wasysym}
+
+\begin {document}
+
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.3 mm}} % Defines a Hnew command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\Large Московский физико-технический институт }\\[1.5cm] % Name of your university/college
+\textsc{\Large Факультет аэрокосмических технологий}\\[0.5cm] % Major heading such as course name
+\textsc{\large Лабораторная работа }\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Устойчивость стержней }\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Автор:}\\ Артем \textsc{Овчинников} % Your name
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Преподаватель:} \\
+??? \textsc{???} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[4cm]
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\tableofcontents
+
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Аннотация}
+В данной работе изучена теория Эйлера устойчивости сжатого стержня в теории и на опыте, приведено сравнение результатов.
+
+
+\section{Теоретические сведения}
+Условие равновесия части стержня:
+\begin{equation}
+    M(x) = -Py
+\end{equation}
+где $M(x)$ - изгибающий момент в сечении, $P$ - сжимающая сила.
+
+Из теории изгиба балки (при малом $y$):
+\begin{equation}
+    y" \approx \frac{M(x)}{EJ}
+\end{equation}
+
+Решая полученное дифференциальное уравнение ($y(0)=y(l)=0$):
+\begin{equation}
+    P_{cr} = \frac{\pi^2 n^2  EJ}{l^2}
+\end{equation}
+
+
+\section{Методика измерений}
+Под руководством преподавателя расположите и закрепите
+кронштейны с роликами на раме. Нагрузите стержни, используя винты, до
+потери устойчивости. Для этого снимите показания датчиков пере-
+мещения для 8—10 значений силы и отложите полученные значения
+на графике. С помощью графика определите критическую силу.
+
+
+\section{Используемое оборудование}
+На лабораторном стенде смонтированы два длинных стержня прямоугольного сечения (линейки). На стержни нанесена миллиметровая шкала. Один стержень закреплен консольно, другой имеет на конце ролик, который может свободно проскальзывать по опоре. \\
+Передача сжимающей нагрузки производится винтами, величину сжимающей силы регистрируют датчики силы. Контроль перемещения точки приложения силы осуществляется с помощью датчиков перемещения.
+
+
+
+\section{Результаты измерений и обработка данных}
+\section{Обсуждение результатов}
+\section{Заключение}
+
+\end{document}
